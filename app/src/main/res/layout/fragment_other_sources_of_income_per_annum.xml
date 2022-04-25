@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="otherSourceModel"
+            type="sk.sandeep.shreemicrofindemoapp.models.OtherSourcesOfIncomePerAnnumModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/space15dp"
+        tools:context=".fragments.OtherSourcesOfIncomePerAnnumFragment">
+
+        <TextView
+            style="@style/LabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/remittance" />
+
+        <EditText
+            android:id="@+id/et_remittance"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@={otherSourceModel.remittance+""}' />
+
+        <TextView
+            style="@style/LabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rent_lease" />
+
+        <EditText
+            android:id="@+id/et_rent"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@={otherSourceModel.rent+""}' />
+
+        <TextView
+            style="@style/LabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/pension" />
+
+        <EditText
+            android:id="@+id/et_pension"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@={otherSourceModel.pension+""}' />
+
+        <TextView
+            style="@style/LabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/govtTransfer" />
+
+        <EditText
+            android:id="@+id/et_govtTransfer"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@={otherSourceModel.govtTransfer+""}' />
+
+        <TextView
+            style="@style/LabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/scholarship" />
+
+        <EditText
+            android:id="@+id/et_scholarship"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@={otherSourceModel.scholarship+""}' />
+
+        <TextView
+            style="@style/LabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/other" />
+
+        <EditText
+            android:id="@+id/et_other"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@={otherSourceModel.other+""}' />
+
+        <TextView
+            style="@style/LabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/self_reported_income" />
+
+        <EditText
+            android:id="@+id/et_selfReportIncome"
+            style="@style/EditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@={otherSourceModel.selfReportIncome+""}' />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/space15dp"
+                android:text="@string/total_other_income_b"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/totalOtherIncome"
+                style="@style/LabelStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/space15dp"
+                android:text='@={otherSourceModel.totalOtherIncome+""}' />
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+
+</layout>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="psoiModel"
+            type="sk.sandeep.shreemicrofindemoapp.models.PrimarySourceOfIncomeModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/space15dp"
+        tools:context=".fragments.PrimarySourceOfIncomeFragment">
+
+        <TextView
+            style="@style/LabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sector_of_work" />
+
+        <sk.sandeep.shreemicrofindemoapp.CustomSpinner
+            android:id="@+id/sector_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space15dp" />
+
+        <TextView
+            style="@style/LabelStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/nature_of_work" />
+
+        <sk.sandeep.shreemicrofindemoapp.CustomSpinner
+            android:id="@+id/nature_of_work"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/space15dp" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/scrollable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space15dp">
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space50dp"
+                        android:maxLines="2"
+                        android:text="@string/income_details_of_earning_members_living_in_the_house"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:maxLines="2"
+                        android:padding="@dimen/space6dp"
+                        android:text="@string/client" />
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:maxLines="2"
+                        android:padding="@dimen/space6dp"
+                        android:text="@string/spouse" />
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:maxLines="2"
+                        android:padding="@dimen/space6dp"
+                        android:text="@string/unmarried_family_members_1" />
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:maxLines="2"
+                        android:padding="@dimen/space6dp"
+                        android:text="@string/unmarried_family_members_2" />
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:maxLines="2"
+                        android:padding="@dimen/space6dp"
+                        android:text="@string/unmarried_family_members_3" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space15dp">
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space150dp"
+                        android:layout_height="@dimen/space50dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:paddingRight="10dp"
+                        android:text="@string/daily"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_clientDaily"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.clientDaily+""}' />
+
+                    <EditText
+                        android:id="@+id/et_spouseDaily"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.spouseDaily+""}' />
+
+                    <EditText
+                        android:id="@+id/et_unmarriedFM1Daily"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.unmarriedFM1Daily+""}' />
+
+                    <EditText
+                        android:id="@+id/et_unmarriedFM2Daily"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.unmarriedFM2Daily+""}' />
+
+                    <EditText
+                        android:id="@+id/et_unmarriedFM3Daily"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.unmarriedFM3Daily+""}' />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space15dp">
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space150dp"
+                        android:layout_height="@dimen/space50dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:paddingRight="10dp"
+                        android:text="@string/no_of_days_works_in_a_month"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_clientDWM"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.clientDWM+""}' />
+
+                    <EditText
+                        android:id="@+id/et_spouseDWM"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.spouseDWM+""}' />
+
+                    <EditText
+                        android:id="@+id/et_unmarriedFM1DWM"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.unmarriedFM1DWM+""}' />
+
+                    <EditText
+                        android:id="@+id/et_unmarriedFM2DWM"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.unmarriedFM2DWM+""}' />
+
+                    <EditText
+                        android:id="@+id/et_unmarriedFM3DWM"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.unmarriedFM3DWM+""}' />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space15dp">
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space150dp"
+                        android:layout_height="@dimen/space50dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:paddingRight="10dp"
+                        android:text="@string/no_of_months_in_a_year"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_clientMWY"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.clientMWY+""}' />
+
+                    <EditText
+                        android:id="@+id/et_spouseMWY"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.spouseMWY+""}' />
+
+                    <EditText
+                        android:id="@+id/et_unmarriedFM1MWY"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.unmarriedFM1MWY+""}' />
+
+                    <EditText
+                        android:id="@+id/et_unmarriedFM2MWY"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.unmarriedFM2MWY+""}' />
+
+                    <EditText
+                        android:id="@+id/et_unmarriedFM3MWY"
+                        style="@style/EditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='@={psoiModel.unmarriedFM3MWY+""}' />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="@dimen/space15dp">
+
+                    <TextView
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space150dp"
+                        android:layout_height="@dimen/space50dp"
+                        android:ellipsize="none"
+                        android:text="@string/avg_annual_income"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_clientAvg"
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:padding="@dimen/space6dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tv_spouseAvg"
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:padding="@dimen/space6dp"
+                        android:text="" />
+                    <!--'@{((psoiModel.spouseDaily + psoiModel.spouseDWM + psoiModel.spouseMWY)/3 )+""}'-->
+                    <TextView
+                        android:id="@+id/tv_unmarriedFM1Avg"
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:padding="@dimen/space6dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tv_unmarriedFM2Avg"
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:padding="@dimen/space6dp"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/tv_unmarriedFM3Avg"
+                        style="@style/LabelStyle"
+                        android:layout_width="@dimen/space200dp"
+                        android:layout_height="@dimen/space33dp"
+                        android:layout_marginBottom="@dimen/space12dp"
+                        android:padding="@dimen/space6dp"
+                        android:text="" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelStyle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/space15dp"
+                android:text="@string/total_annual_income_a"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_totalAnnualIncome"
+                style="@style/LabelStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/space12dp"
+                android:padding="@dimen/space15dp"
+                android:text="0" />
+        </LinearLayout>
+    </LinearLayout>
+
+    </ScrollView>
+</layout>

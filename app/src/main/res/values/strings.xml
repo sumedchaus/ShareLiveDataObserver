@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">ShreeMicrofinDemoApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="totalFamilyMembers">TotalFamilyMembers</string>
+    <string name="earningFamilyMembers">EarningFamilyMembers</string>
+    <string name="others">Others</string>
+    <string name="electronicItems">ElectronicItems</string>
+    <string name="smartPhone">SmartPhone</string>
+    <string name="furniture">Furniture</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="liveStock">LiveStock</string>
+    <string name="land">Land</string>
+    <string name="lpg">LPG</string>
+    <string name="water">Water</string>
+    <string name="electricity">Electricity</string>
+    <string name="select">Select Item</string>
+    <string name="nature_of_work">Nature of Work:</string>
+    <string name="sector_of_work">Sector of Work:</string>
+    <string name="none_selected">None Selected</string>
+    <string name="income_details_of_earning_members_living_in_the_house">Income Details of earning members living in the house</string>
+    <string name="client">Client</string>
+    <string name="spouse">Spouse</string>
+    <string name="unmarried_family_members_1">Unmarried Family members-1</string>
+    <string name="unmarried_family_members_2">Unmarried Family members-2</string>
+    <string name="unmarried_family_members_3">Unmarried Family members-3</string>
+    <string name="daily">Daily</string>
+    <string name="no_of_days_works_in_a_month">No of Days works in a month</string>
+    <string name="no_of_months_in_a_year">No of months in a year</string>
+    <string name="avg_annual_income">Avg.Annual Income</string>
+    <string name="total_annual_income_a">Total Annual Income (A)</string>
+    <string name="remittance">Remittance</string>
+    <string name="rent_lease">Rent/Lease</string>
+    <string name="pension">Pension</string>
+    <string name="govtTransfer">GovtTransfer</string>
+    <string name="scholarship">Scholarship</string>
+    <string name="other">Other</string>
+    <string name="self_reported_income">Self Reported Income</string>
+    <string name="total_other_income_b">Total Other Income(B)</string>
+    <string name="total_annual_expences_d">Total Annual Expences(D)</string>
+    <string name="food">Food</string>
+    <string name="utilities">Utilities</string>
+    <string name="transport">Transport</string>
+    <string name="house_or_shop_rent">HouseOrShopRent</string>
+    <string name="clothing">Clothing</string>
+    <string name="medical">Medical</string>
+    <string name="school_fee">SchoolFee</string>
+    <string name="total_monthly_expenses">Total Monthly Expenses</string>
+    <string name="house_renovation">HouseRenovation</string>
+    <string name="purchased_house_hold">PurchasedHouseHold</string>
+    <string name="function">Function</string>
+    <string name="total_irregular_expanses_e">Total Irregular Expanses(E)</string>
+    <string name="disposable_income_c_f_g">Disposable Income((C)-(F)-(G))</string>
+    <string name="g_monthly_loan_repayments_amount">G. Monthly Loan Repayments Amount</string>
+    <string name="f_total_expenditures_d_e">F. Total Expenditures(D+E)</string>
+    <string name="c_total_income_a_b">C. Total Income (A+B)</string>
+
+    <!--    <string name="electronicItems">ElectronicItems<font color='#FF0000'>*</font></string>-->
+
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edit_text_border"
+    android:orientation="vertical">
+
+    <Spinner
+        android:id="@+id/custom_spinner"
+        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:minHeight="38dp"
+        android:spinnerMode="dropdown" />
+</LinearLayout>

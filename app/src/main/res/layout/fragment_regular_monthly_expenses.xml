@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="regularMonthlyModel"
+            type="sk.sandeep.shreemicrofindemoapp.models.RegularMonthlyExpensesModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.RegularMonthlyExpensesFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:padding="@dimen/space15dp">
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/food" />
+
+            <EditText
+                android:id="@+id/et_food"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@={regularMonthlyModel.food+""}' />
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/utilities" />
+
+            <EditText
+                android:id="@+id/et_utilities"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@={regularMonthlyModel.utilities+""}' />
+
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/transport" />
+
+            <EditText
+                android:id="@+id/et_transport"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@={regularMonthlyModel.transport+""}' />
+
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/house_or_shop_rent" />
+
+            <EditText
+                android:id="@+id/et_house_shop_rent"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@={regularMonthlyModel.houseOrShopRent+""}' />
+
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/clothing" />
+
+            <EditText
+                android:id="@+id/et_clothing"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@={regularMonthlyModel.clothing+""}' />
+
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medical" />
+
+            <EditText
+                android:id="@+id/et_medical"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@={regularMonthlyModel.medical+""}' />
+
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/school_fee" />
+
+            <EditText
+                android:id="@+id/et_schoolFee"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@={regularMonthlyModel.schoolFee+""}' />
+
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/other" />
+
+            <EditText
+                android:id="@+id/et_other"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text='@={regularMonthlyModel.other+""}' />
+
+
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_monthly_expenses" />
+
+            <EditText
+                android:id="@+id/et_totalMonthlyExpenses"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/light_grey"
+                android:enabled="false"
+                android:text='@={regularMonthlyModel.totalMonthlyExpenses+""}' />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelStyle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/space15dp"
+                    android:text="@string/total_annual_expences_d"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_totalAnnualExpensesD"
+                    style="@style/LabelStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/space15dp"
+                    android:text="0" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
